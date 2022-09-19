@@ -23,3 +23,56 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     $(multipleCardCarousel).addClass("slide");
 }
 
+// ===================
+// function contact us
+var modal = document.getElementById("contact-us");
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+// contact me
+
+// Deploy ID : AKfycbyMFUOuioujxM1HAHgsWjYg_aljq6iHVQuWQJCZC-FQKXXr9lZ5D0E7_4yOkE3bsPGDLQ
+// URL App : https://script.google.com/macros/s/AKfycbyMFUOuioujxM1HAHgsWjYg_aljq6iHVQuWQJCZC-FQKXXr9lZ5D0E7_4yOkE3bsPGDLQ/exec
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbyMFUOuioujxM1HAHgsWjYg_aljq6iHVQuWQJCZC-FQKXXr9lZ5D0E7_4yOkE3bsPGDLQ/exec";
+const form = document.forms["contact-form"];
+
+// select yg class namanya .btn-kirim || manipulasi dom\dokumen
+const btnKirim = document.querySelector(".btn-kirim");
+const btnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".my-alert");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // ketika tombol submit di klik
+    // tampilkan tombol loading, hilangkan tombol kirim
+    btnLoading.classList.toggle("d-none"); // toggle layak nya sebuah switch atau tombol lampu
+    btnKirim.classList.toggle("d-none");
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+    })
+        .then((response) => {
+            // then
+
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+
+            // tampilkan alert
+            myAlert.classList.toggle('d-none');
+
+            // reset form
+            form.reset();
+
+            console.log("Success!", response);
+        })
+        .catch((error) => console.error("Error!", error.message));
+});

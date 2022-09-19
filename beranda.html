@@ -18,6 +18,9 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- font -->
+    <link href="//db.onlinewebfonts.com/c/2f86dc938a55788d3416b876b43a116a?family=Poppins" rel="stylesheet" type="text/css"/>
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -355,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <div class="card">
                         <div class="img-wrapper"><img
                                 src="https://upj.ac.id/upload/module/kerjasama/ks-logo-1629049558-74.png"
@@ -365,7 +368,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <div class="card">
                         <div class="img-wrapper"><img
                                 src="https://upj.ac.id/upload/module/kerjasama/ks-logo-1629091533-121.png"
@@ -375,7 +378,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <div class="card">
                         <div class="img-wrapper"><img
                                 src="https://upj.ac.id/upload/module/kerjasama/ks-logo-1629091662-126.png"
@@ -385,7 +388,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <div class="card">
                         <div class="img-wrapper"><img
                                 src="https://upj.ac.id/upload/module/kerjasama/ks-logo-1629090569-92.png"
@@ -395,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <div class="card">
                         <div class="img-wrapper"><img
                                 src="https://upj.ac.id/upload/module/kerjasama/ks-logo-1654498454-143.png"
@@ -405,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item active">
+                <div class="carousel-item">
                     <div class="card">
                         <div class="img-wrapper"><img
                                 src="https://upj.ac.id/upload/module/kerjasama/ks-logo-1503657361-28.png"
@@ -502,6 +505,82 @@
                                     class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    
+        <!-- contact us -->
+        <div id="container-floating">
+            <div id="floating-button">
+    
+                <!-- icon -->
+                <span class="card-contact">
+                    <i 
+                    class="fa-regular fa-envelope text-white icons-mail" 
+                    onclick="document.getElementById('contact-us').style.display='block'" 
+                    style="width: auto"
+                    ></i>
+                </span>
+                
+                <!-- form -->
+                <div id="contact-us" class="modal">
+                    <div class="modal-content">
+                        <div class="container contact-us">
+                            <!-- mulai contact us -->
+                            <h3 class="text-center fw-bold">Kontak Kami</h2>
+                            <p class="text-center mx-auto">Jika anda punya pertanyaan. Tolong jangan sungkan untuk kontak kami. Team kami siap membantu anda.</p>
+                            <!-- garis -->
+                            <hr />
+                            <div class="row">
+                                <div class="col-sm-12">
+
+                                    <!-- alert jika gagal submit -->
+                                    <div class="alert alert-success alert-dismissible fade show mt-1 d-none my-alert" role="alert">
+                                        <strong>Terima Kasih</strong> Pesan anda sudah kami terima.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    
+                                    <form name="contact-form" method="post">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <!-- name untuk dikanali dari kolom sheet form -->
+                                                    <input class="form-control" type="text" aria-describedby="nama" id="nama" name="nama" />
+                                                    <label for="nama">Nama</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <input class="form-control" type="email" aria-describedby="email" id="email" name="email"/>
+                                                    <label for="email">Email</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <input class="form-control" name="subject" id="subject" placeholder="Enter Subject" />
+                                                    <label for="subject">Subject</label>
+                                                </div>
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <textarea class="form-control" placeholder="Pesan..." name="message" id="message" cols="109" rows="10"></textarea>
+                                                    <label for="message">Message</label>
+                                                </div>
+                                                <!-- button submit -->
+                                                <button class="btn btn-primary btn-kirim" type="submit">Submit</button>
+                                                <!-- button loading | d-none (display none)-->
+                                                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                    Loading...
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
             </div>
         </div>
     </footer>
