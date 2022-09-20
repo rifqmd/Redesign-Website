@@ -23,8 +23,8 @@ if (window.matchMedia("(min-width: 768px)").matches) {
     $(multipleCardCarousel).addClass("slide");
 }
 
-// ===================
-// function contact us
+
+// function clik contact us
 var modal = document.getElementById("contact-us");
 
 // When the user clicks anywhere outside of the modal, close it
@@ -34,7 +34,9 @@ window.onclick = function (event) {
     }
 };
 
-// contact me
+
+
+// contact us
 
 // Deploy ID : AKfycbyMFUOuioujxM1HAHgsWjYg_aljq6iHVQuWQJCZC-FQKXXr9lZ5D0E7_4yOkE3bsPGDLQ
 // URL App : https://script.google.com/macros/s/AKfycbyMFUOuioujxM1HAHgsWjYg_aljq6iHVQuWQJCZC-FQKXXr9lZ5D0E7_4yOkE3bsPGDLQ/exec

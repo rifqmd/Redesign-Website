@@ -8,15 +8,20 @@
     <title>Program Studi Akuntansi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon" />
-    <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
 
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
@@ -79,13 +84,9 @@
         <h1 style="margin-top: 200px;">Hello Akuntansi</h1>
     </section>
 
-    <!-- footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <!-- <div class="col-md-3 col-sm-6">
-                    
-                </div> -->
                 <div class="col-sm-12 col-md-6">
                     <img class="m-2" src="../assets/img/logo-upj-light.png" alt="logo upj light">
                     <div class="loc-upj">
@@ -154,9 +155,99 @@
                 </div>
             </div>
         </div>
+    
+        <!-- contact us -->
+        <div id="container-floating">
+            <div id="floating-button">
+    
+                <!-- icon -->
+                <span class="card-contact">
+                    <i 
+                    class="fa-regular fa-envelope text-white icons-mail" 
+                    onclick="document.getElementById('contact-us').style.display='block'" 
+                    style="width: auto"
+                    ></i>
+                </span>
+                
+                <!-- form -->
+                <div id="contact-us" class="modal">
+                    <div class="modal-content">
+                        <div class="container contact-us">
+                            <!-- mulai contact us -->
+                            <h3 class="text-center fw-bold">Kontak Kami</h2>
+                            <p class="text-center mx-auto">Jika anda punya pertanyaan. Tolong jangan sungkan untuk kontak kami. Team kami siap membantu anda.</p>
+                            <!-- garis -->
+                            <hr />
+                            <div class="row">
+                                <div class="col-sm-12">
+
+                                    <!-- alert jika berhasil submit || data-submit untuk cek status isi submit-->
+                                    <div class="alert alert-success alert-dismissible fade show mt-1 d-none my-alert" data-submit="" role="alert">
+                                        <strong>Terima Kasih</strong> Pesan anda sudah kami terima.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    <!-- alert jika gagal submit (refence : https://stackoverflow.com/questions/49041915/post-contact-form-7-in-addeventlistener-wordpress) -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                        <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+                                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                        </symbol>
+                                    </svg>
+                                    <div class="alert alert-danger alert-dismissible fade show d-none my-alert-err" data-submit="" role="alert">
+                                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                        <strong>Maaf</strong> Pesan anda gagal terkirim.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                    
+                                    
+                                    <form name="contact-form" method="post">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <!-- name untuk dikanali dari kolom sheet form -->
+                                                    <input class="form-control" type="text" aria-describedby="nama" id="nama" name="nama" />
+                                                    <label for="nama">Nama</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <input class="form-control" type="email" aria-describedby="email" id="email" name="email"/>
+                                                    <label for="email">Email</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <input class="form-control" name="subject" id="subject" placeholder="Enter Subject" />
+                                                    <label for="subject">Subject</label>
+                                                </div>
+                                                <div class="form-floating mt-3 mb-3">
+                                                    <textarea class="form-control" placeholder="Pesan..." name="message" id="message" cols="109" rows="10"></textarea>
+                                                    <label for="message">Message</label>
+                                                </div>
+                                                <!-- button submit -->
+                                                <button class="btn btn-primary btn-kirim" type="submit">Submit</button>
+                                                <!-- button loading | d-none (display none)-->
+                                                <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                    Loading...
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../index.js"></script>
 </body>
 
 </html>

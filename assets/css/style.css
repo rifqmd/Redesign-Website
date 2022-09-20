@@ -16,7 +16,23 @@ Dokumentasi
 12. Kontak Kami
 13. Form
 
+==== Halaman Informatika ====
+2.1 Head Img Infor
+2.2 Content Infor
+
 ---------- */
+
+
+/* FONT 
+HEADING
+font-family: 'Montserrat', sans-serif;
+
+P
+font-family: 'Roboto', sans-serif;
+
+QUOTE 
+font-family: 'Lora', serif;
+ */
 
 /* ----------
 Color Guide
@@ -35,8 +51,6 @@ a {
     text-decoration: none;
 }
 
-/* var(--colors-white) */
-
 /* ----------
 2. Navbar
 ---------- */
@@ -51,51 +65,229 @@ a {
 }
 
 /* ----------
+3. Video Navbar
+---------- */
+.video-body {
+    background-color: var(--colors-white);
+}
+.section-page {
+    padding: 40px 0 !important;
+    padding: 0;
+    list-style-type: none;
+    color: #00416f;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.36);
+    font-family: 'Montserrat', sans-serif;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 500px;
+    padding: 0;
+}
+.schome-hero {
+    margin-bottom: 30px;
+    padding-bottom: 0;
+    background-color: #a6a6a6;
+    height: 400px;
+    position: relative;
+}
+.schome-hero > img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.schome-hero__logotitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    width: 75%;
+}
+.schome-hero__logotitle h1 {
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 40px auto 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.schome-hero__content {
+    background-color: #073c64;
+    color: #fff;
+    padding: 5px 20px;
+}
+.schome-hero__content:after {
+    content: "";
+    width: 350px;
+    height: 4px;
+    background-color: #fdcb2c;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+}
+.schome-hero__video {
+    height: 80vh;
+    max-height: 80vh;
+    position: relative;
+}
+.schome-hero__video > video {
+    display: block;
+    vertical-align: baseline;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    object-fit: cover;
+    -o-object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+@media (min-width: 768px) {
+    .schome-hero__video > img {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .schome-hero__video > img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    .schome-hero__video > video {
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .schome-hero {
+        position: relative;
+        margin-bottom: 100px;
+    }
+    .schome-hero__logotitle h1 {
+        font-size: 42px;
+    }
+    .schome-hero__content {
+        padding: 30px 40px;
+        max-width: 90%;
+        bottom: -60px;
+        left: 25px;
+        position: absolute;
+    }
+    .schome-hero__content h1 {
+        font-size: 56px;
+        margin: 15px 0 30px;
+    }
+    .schome-hero__content p {
+        font-size: 19px;
+        line-height: 30px;
+    }
+}
+@media (min-width: 1024px) {
+    .schome-hero {
+        height: 750px;
+    }
+    .schome-hero__content {
+        max-width: 780px;
+    }
+}
+@media (min-width: 1200px) {
+    .schome-hero__content {
+        max-width: 780px;
+        left: calc(((100vw - 1170px) / 2) - 40px);
+    }
+}
+@media (max-width: 767px) {
+    .schome-hero__logotitle img {
+        max-height: 90px;
+    }
+    .schome-hero__logotitle h1 {
+        font-size: 22px;
+        margin-top: 20px;
+        max-width: 240px;
+        width: 100%;
+    }
+    .schome-hero__content {
+        margin: -100px 15px 15px;
+        position: relative;
+    }
+    .schome-hero__content:after {
+        top: 28px;
+        height: 3px;
+        right: -10px;
+        width: 60px;
+    }
+    .schome-hero__content h1 {
+        font-size: 23px;
+        line-height: 35px;
+        margin-top: 10px;
+    }
+    .schome-hero__content p {
+        font-size: 12px;
+    }
+    .schome-hero--video {
+        max-height: 240px;
+    }
+}
+.schome-hero--video {
+    height: 90vh;
+    max-height: 80vh;
+    overflow: hidden;
+}
+.schome-hero--offset {
+    margin-bottom: 100px;
+}
+@media (min-width: 768px) {
+    .schome-hero--offset {
+        margin-bottom: 140px;
+    }
+}
+
+/* ----------
 4. Tentang UPJ
 ---------- */
 
 #tentang-upj {
     margin-top: -50px;
 }
-
 .jumbotron {
     /* padding-top: 6rem; */
     background-color: #fff;
 }
-
 .line-title {
     position: absolute;
     margin-left: -30px;
 }
-
 .about-upj {
     padding-top: 3rem;
-    /* background-color: var(--colors-white); */
     background-color: #fff;
-    /* height: 500px;
-  width: 1440px; */
 }
 .title-content {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 .txt-about-upj {
     font-family: Montserrat;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 400px;
     line-height: 25px;
     width: 607px;
     margin-left: 20px;
     letter-spacing: 0em;
     text-align: justify;
     color: var(--color-medium-grey);
-
-    /* @media (min-width: 576px) {
-        .txt-about-upj.p {
-            width: 100%;
-            margin: auto;
-        }
-    } */
+}
+@media (max-width: 768px) {
+    .txt-about-upj {
+        width: 90%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
 }
 .images-gedung {
     margin-top: 25px;
@@ -126,8 +318,7 @@ div.nilai-upj {
     height: 71.88px;
 }
 .txt-title-value {
-    /* SEMENTARA */
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 32px;
@@ -135,17 +326,7 @@ div.nilai-upj {
     text-align: center;
 }
 .txt-content-value {
-    /* SEMENTARA */
-    font-family: "Montserrat";
-    /* font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px; */
-    /* or 143% */
-
-    /* display: flex;
-    align-items: center;
-    text-align: center; */
+    font-family: 'Roboto', sans-serif;
 }
 .sambutan-rektor {
     background-color: var(--colors-navy-1);
@@ -159,7 +340,7 @@ div.section-body {
     justify-content: inter-word;
     margin-top: 40px;
 
-    /* SEMENTARA */
+    /* QUOTE */
     font-family: "Lora", serif;
 }
 .images-rektor {
@@ -181,19 +362,15 @@ svg.ornamen-waves {
     width: 451px;
     height: 76px;
     left: 226px;
-
-    font-family: "Montserrat";
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    /* or 175% */
-
     display: flex;
     align-items: center;
     text-align: justify;
 }
-
 .fakultas-caption {
     border: 0;
     margin-left: 30px;
@@ -201,7 +378,7 @@ svg.ornamen-waves {
     margin-top: -30px;
     background-color: #073c64;
     border-left: 8px solid #fdcb2c;
-    font-family: "Circular Std";
+    font-family: 'Montserrat', sans-serif;
     height: 64px;
     width: 250px;
     padding: 10px 15px;
@@ -210,14 +387,12 @@ svg.ornamen-waves {
     text-align: center;
     position: relative;
 }
-
 @media (min-width: 768px) {
     .gallery-item .gallery-caption {
         height: 85px;
         overflow-y: hidden;
     }
 }
-
 .fakultas-caption > a {
     font-size: 15px;
     line-height: 22px;
@@ -238,9 +413,6 @@ svg.ornamen-waves {
 6. PJ - Community
 ---------- */
 
-.pj-community {
-}
-
 @media (min-width: 1400px) {
     .pj-community {
         height: 840px;
@@ -255,7 +427,6 @@ svg.ornamen-waves {
         margin-bottom: 0;
     }
 }
-
 img.left-full .right-full {
     position: absolute;
     top: 0;
@@ -330,7 +501,7 @@ img.left-full .right-full {
 ---------- */
 
 .txt-research {
-    font-family: Montserrat;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
@@ -386,7 +557,7 @@ h2.title-pendaftaran {
 ---------- */
 
 .title-kerjasama {
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -396,7 +567,7 @@ h2.title-pendaftaran {
     margin-top: 50px;
 }
 .content-kerjasama {
-    font-family: "Montserrat";
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -405,7 +576,6 @@ h2.title-pendaftaran {
     text-align: center;
     color: #4c4c4c;
 }
-
 /* slide */
 .carousel-inner {
     padding: 1em;
@@ -595,7 +765,6 @@ h2.title-pendaftaran {
         font-weight: 600;
     }
 }
-
 .loc-icons,
 .number-icons {
     align-items: center;
@@ -677,9 +846,14 @@ h2.title-pendaftaran {
     font-size: 37px;
     margin: 12px;
 }
+
+/* ----------
+12. Form
+---------- */
+
 .contact-us h2, p {
-    font-family: "Poppins", sans-serif;;
-} 
+    font-family: 'Roboto', sans-serif;
+}
 /* Add padding to container elements */
 .contact-us {
     padding: 16px;
@@ -706,189 +880,65 @@ h2.title-pendaftaran {
     width: 60%; /* Could be more or less, depending on screen size */
 }
 
-/* ----------
-3. Video Navbar
----------- */
+/* ++++++++++
+2.1 Head Img Infor
+++++++++++ */
+#img-head {
+    margin-top: 86px;
+    height: auto;
+    border: 0;
+}
+.head-img-inf {
+    width: 100%;
+    height: 100%;
+}
 
-.video-body {
+/* ++++++++++
+2.2 Content Infor
+++++++++++ */
+
+.title__inf-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+.img-inf__people-code {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+.peminatan-karir {
+    margin-top: 20px;
+}
+.title__peminatan {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+li b{
+    font-size: 17px;
+}
+ul.content__karir{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* ++++++++++
+2.3 Alumni Say
+++++++++++ */
+
+.alumni-say {
+    border: 0;
     background-color: var(--colors-white);
+    padding: 5px;
 }
-.section-page {
-    padding: 40px 0 !important;
-    padding: 0;
-    list-style-type: none;
-    color: #00416f;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(112, 112, 112, 0.36);
-    font-family: "Circular Std";
-    -o-object-fit: cover;
-    object-fit: cover;
-    height: 500px;
-    padding: 0;
+.title__alumni-say{
+    text-align: center;
+    margin: 10px 0 20px 0;
 }
-.schome-hero {
-    margin-bottom: 30px;
-    padding-bottom: 0;
-    background-color: #a6a6a6;
-    height: 400px;
-    position: relative;
-    /* video*/
-    /* offset*/
-}
-.schome-hero > img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-.schome-hero__logotitle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    width: 75%;
-}
-.schome-hero__logotitle h1 {
-    color: #fff;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin: 40px auto 0;
-    font-family: "Gama Serif", Georgia, "Times New Roman", Times, serif;
-}
-.schome-hero__content {
-    background-color: #073c64;
-    color: #fff;
-    padding: 5px 20px;
-}
-.schome-hero__content:after {
-    content: "";
-    width: 350px;
-    height: 4px;
-    background-color: #fdcb2c;
-    position: absolute;
-    top: 80px;
-    right: 10px;
-}
-.schome-hero__video {
-    height: 80vh;
-    max-height: 80vh;
-    position: relative;
-}
-.schome-hero__video > video {
-    display: block;
-    vertical-align: baseline;
-    min-width: 100%;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    object-fit: cover;
-    -o-object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-}
-@media (min-width: 768px) {
-    .schome-hero__video > img {
-        display: none;
-    }
-}
-@media (max-width: 767px) {
-    .schome-hero__video > img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
-    .schome-hero__video > video {
-        display: none;
-    }
-}
-@media (min-width: 768px) {
-    .schome-hero {
-        position: relative;
-        margin-bottom: 100px;
-    }
-    .schome-hero__logotitle h1 {
-        font-size: 42px;
-    }
-    .schome-hero__content {
-        padding: 30px 40px;
-        max-width: 90%;
-        bottom: -60px;
-        left: 25px;
-        position: absolute;
-    }
-    .schome-hero__content h1 {
-        font-size: 56px;
-        margin: 15px 0 30px;
-    }
-    .schome-hero__content p {
-        font-size: 19px;
-        line-height: 30px;
-    }
-}
-@media (min-width: 1024px) {
-    .schome-hero {
-        height: 750px;
-    }
-    .schome-hero__content {
-        max-width: 780px;
-    }
-}
-@media (min-width: 1200px) {
-    .schome-hero__content {
-        max-width: 780px;
-        left: calc(((100vw - 1170px) / 2) - 40px);
-    }
-}
-@media (max-width: 767px) {
-    .schome-hero__logotitle img {
-        max-height: 90px;
-    }
-    .schome-hero__logotitle h1 {
-        font-size: 22px;
-        margin-top: 20px;
-        max-width: 240px;
-        width: 100%;
-    }
-    .schome-hero__content {
-        margin: -100px 15px 15px;
-        position: relative;
-    }
-    .schome-hero__content:after {
-        top: 28px;
-        height: 3px;
-        right: -10px;
-        width: 60px;
-    }
-    .schome-hero__content h1 {
-        font-size: 23px;
-        line-height: 35px;
-        margin-top: 10px;
-    }
-    .schome-hero__content p {
-        font-size: 12px;
-    }
-    .schome-hero--video {
-        max-height: 240px;
-    }
-}
-.schome-hero--video {
-    height: 90vh;
-    max-height: 80vh;
-    overflow: hidden;
-}
-.schome-hero--offset {
-    margin-bottom: 100px;
-}
-@media (min-width: 768px) {
-    .schome-hero--offset {
-        margin-bottom: 140px;
-    }
+.img-alumni-inf {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    float: center;
 }
